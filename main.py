@@ -1,10 +1,8 @@
 from flask import Flask, redirect
 from flask import render_template
-from flask import request
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired
-import data
 from data import db_session
 from data.users import User
 from flask_login import login_user, current_user
