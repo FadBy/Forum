@@ -1,0 +1,126 @@
+body{
+    background: #fffafa;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.main_border{
+    margin-top: 5px;
+    border: 5px solid #8c3636;
+    height: 1000px;
+}
+
+.up_panel{
+    height: 140px;
+    border: 5px solid #8c3636;
+    background-color: #7d002b;
+    margin: 0px;
+}
+
+header .btn_login{
+    background: #622586;
+    display: inline-block;
+    float: right;
+    margin-top: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+    height: 100%;
+    text-decoration: none;
+    line-height: 140px;
+    background-image: linear-gradient(to right, #6b2929, #7b649400)
+
+}
+
+header .logo{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 100px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 30px;
+    letter-spacing: 12px;
+}
+
+header .profile{
+    display: inline-block;
+    float: right;
+    color: #ffffff;
+    height: 100%;
+    line-height: 40px;
+    margin: 20px 40px;
+    font-size: 25px;
+}
+
+header .logout{
+     color: #fff;
+     text-decoration: underline;
+}
+
+ul{
+    margin: 0px;
+}
+
+header .insets{
+    background: #980535;
+    height: 70px;
+    margin: 0px;
+}
+
+header .inset_btn{
+    padding-left: 25px;
+    padding-right: 25px;
+    line-height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 17px;
+    font-weight: bolder;
+    color: #000000;
+    background: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+
+}
+
+form{
+    margin-left: 20px;
+}
+
+.alert{
+    background: #9e0000;
+    display: inline-block;
+    color: #ffffff;
+    padding: 4px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.input{
+    width: 400px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.btn_log_in{
+    width: 200px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 19px;
+    font-weight: bold;
+    background: #79027b;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.btn_remember{
+    width: 17px;
+    height: 17px;
+}
+
+.login_text{
+    font-size: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}

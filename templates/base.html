@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body>
+<header>
+    <div class="up_panel">
+        <a class="logo" href="/">
+            Форум
+        </a>
+        {% if not current_user.is_authenticated %}
+        <a class="btn_login" href="/login">
+            Войти
+        </a>
+        <a class="btn_login" href="/register">
+            Регистрация
+        </a>
+        {% else %}
+        <div class="profile">
+            {{current_user.name}}<br>
+            <a class="logout" href="/logout">Выйти</a>
+        </div>
+
+
+        {% endif %}
+    </div>
+    <div class="insets">
+        <a class="inset_btn" href="/">
+            Главная
+        </a>
+        <a class="inset_btn" href="/login">
+            Личный кабинет
+        </a>
+    </div>
+
+</header>
+<main class="main_border">
+    {% block content %}{% endblock %}
+</main>
+</body>
+</html>
