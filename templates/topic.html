@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="topic" id="topic">
+    <div class="author">{{topic.user.name}}:</div>
+    <div class="text">
+        <div class="title">{{topic.title}}</div>
+        <div class="description">{{topic.description}}</div>
+    </div>
+</div>
+{% endblock %}
+

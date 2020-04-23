@@ -7,7 +7,8 @@ body{
 .main_border{
     margin-top: 5px;
     border: 5px solid #8c3636;
-    height: 1000px;
+    padding: 30px;
+    background-color: #ff00001a;
 }
 
 .up_panel{
@@ -122,4 +123,80 @@ form{
     font-size: 30px;
     font-weight: bold;
     font-size: 20px;
+}
+
+.topic_btn{
+    background-color: #ad0000;
+    border-radius: 10px;
+    width: 400px;
+    height: 40px;
+    display: inline-block;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#add_topic.description{
+    width: 500px;
+    height: 200px;
+    align: top;
+    font-size: 20px;
+}
+
+.topic{
+    border: 2px solid #860000;
+    display: inline-block;
+    font-size: 15px;
+    text-indent: 20px;
+    padding: 20px;
+    width: 700px;
+    border-left: 20px solid #9c4646;
+    margin-bottom: 15px;
+    margin-right: 50px;
+}
+
+.topic .title{
+    font-size: 25px;
+    font-weight: bold;
+    color: #b50000;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.topic .data{
+    font-size: 17px;
+}
+
+#topic .author{
+    display: table-cell;
+    float: left;
+    font-weight: bold;
+    font-size: 23px;
+    margin-top: 10px;
+    color: #8100c3;
+}
+
+#topic .text{
+    display: table-cell;
+    margin-right: 50px;
+}
+
+.text .title{
+    color: #6600b3;
+    font-size: 30px;
+}
+
+.text .description{
+    font-size: 20px;
+
+}
+
+.delete{
+    color: #8500ff;
+    font-size: 15px;
 }

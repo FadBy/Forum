@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="" method="post" class="login_text" novalidate>
+    <h1>Создание темы</h1>
+    {{ form.hidden_tag() }}
+        {{ form.title.label }}<br>
+        {{ form.title(class="input", autocomplete="off") }}<br>
+        {% for error in form.title.errors %}
+    <div class="alert" role="alert">
+        {{ error }}<br>
+    </div>
+    {% endfor %}<br>
+        {{ form.description.label }}<br>
+        <textarea id="add_topic" class="description" name="description"></textarea><br>
+    {{ form.submit(type="submit", class="btn_log_in") }}
+</form>
+
+{% endblock %}

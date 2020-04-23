@@ -3,7 +3,7 @@
 {% block content %}
 
 <form action="" method="post" class="login_text" novalidate>
-    <h1>Авторизация</h1>
+    <h1>Регистрация</h1>
     {{ form.hidden_tag() }}
         {{ form.email.label }}<br>
         {{ form.email(class="input", type="email") }}<br>
@@ -11,14 +11,22 @@
     <div class="alert" role="alert">
         {{ error }}<br>
     </div>
-    {% endfor %}<br>
+    {% endfor %}
+    {% if message_email %}
+        <div class="alert"> {{message_email}}</div>
+    {% endif %}
+<br>
         {{ form.username.label }}<br>
         {{ form.username(class="input") }}<br>
         {% for error in form.username.errors %}
     <div class="alert" role="alert">
         {{ error }}<br>
     </div>
-    {% endfor %}<br>
+    {% endfor %}
+    {% if message_name %}
+        <div class="alert"> {{message_name}}</div>
+    {% endif %}
+<br>
         {{ form.password.label }}<br>
         {{ form.password(class="input", type="password") }}<br>
         {% for error in form.password.errors %}

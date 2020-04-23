@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Форум</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block content %}
+
+<div>
+    {% if current_user.is_authenticated %}
+        <a class="topic_btn" href="/add_topic">Создать тему</a>
+    {% endif %}
+</div>
+{% for topic in topics %}
+{% set link = "/topic/" + str(topic.id)%}
+<div class="topic">
+    <a class="title" href="{{link}}">{{topic.title}}</a>
+    <div class="data">Автор {{topic.user.name}} &ensp;{{topic.created_date.strftime("%d-%m-%Y")}}
+        {% set link = "/delete/" + str(topic.id) %}
+        {% if topic.user.name == current_user.name %}&ensp;<a class="delete" href={{link}}>Удалить</a>{% endif %}</div>
+</div><br>
+
+{% endfor %}
+{% endblock %}
