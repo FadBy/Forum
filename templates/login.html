@@ -2,18 +2,18 @@
 
 {% block content %}
 
-<form action="" method="post" class="login_text" novalidate>
+<form action="" method="post" class="main_form" novalidate>
     <h1>Авторизация</h1>
     {{ form.hidden_tag() }}
         {{ form.email.label }}<br>
-        {{ form.email(class="input", type="email") }}<br>
+        {{ form.email(class="input", autocomplete="off") }}<br>
         {% for error in form.email.errors %}
     <div class="alert" role="alert">
         {{ error }}<br>
     </div>
     {% endfor %}<br>
         {{ form.password.label }}<br>
-        {{ form.password(class="input", type="password") }}<br>
+        {{ form.password(class="input") }}<br>
         {% for error in form.password.errors %}
     <div class="alert" role="alert">
         {{ error }}

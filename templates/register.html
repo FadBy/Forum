@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form action="" method="post" class="login_text" novalidate>
+<form action="" method="post" novalidate class="main_form">
     <h1>Регистрация</h1>
     {{ form.hidden_tag() }}
         {{ form.email.label }}<br>
@@ -34,6 +34,17 @@
         {{ error }}
     </div>
     {% endfor %}<br>
+    {{ form.repeat_password.label }}<br>
+        {{ form.repeat_password(class="input", type="password") }}<br>
+        {% for error in form.repeat_password.errors %}
+    <div class="alert" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+    {% if message_password %}
+        <div class="alert"> {{message_password}}</div>
+    {% endif %}<br>
+
 
     {{ form.submit(type="submit", class="btn_log_in") }}
 </form>

@@ -9,7 +9,7 @@
 <header>
     <div class="up_panel">
         <a class="logo" href="/">
-            Форум
+            ИгроФорум
         </a>
         {% if not current_user.is_authenticated %}
         <a class="btn_login" href="/login">
@@ -28,10 +28,15 @@
         {% endif %}
     </div>
     <div class="insets">
-        <a class="inset_btn" href="/">
+        <a class="inset_btn" href="/main_page/1">
             Главная
         </a>
-        <a class="inset_btn" href="/login">
+        {% if current_user.is_authenticated %}
+        {% set link = "/profile/" + current_user.name %}
+        {% else %}
+        {% set link = "/login" %}
+        {% endif %}
+        <a class="inset_btn" href="{{link}}">
             Личный кабинет
         </a>
     </div>

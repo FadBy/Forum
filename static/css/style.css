@@ -1,5 +1,5 @@
 body{
-    background: #fffafa;
+    background: #ffcfcf;
     margin-right: 10%;
     margin-left: 10%;
 }
@@ -8,17 +8,17 @@ body{
     margin-top: 5px;
     border: 5px solid #8c3636;
     padding: 30px;
-    background-color: #ff00001a;
+    background-color: #ffe5e5;
 }
 
-.up_panel{
+header .up_panel{
     height: 140px;
     border: 5px solid #8c3636;
     background-color: #7d002b;
     margin: 0px;
 }
 
-header .btn_login{
+.up_panel .btn_login{
     background: #622586;
     display: inline-block;
     float: right;
@@ -34,7 +34,7 @@ header .btn_login{
     background-image: linear-gradient(to right, #7d002b, #7b649400)
 }
 
-header .logo{
+.up_panel .logo{
     display: inline-block;
     color: #ffffff;
     font-size: 100px;
@@ -44,7 +44,7 @@ header .logo{
     letter-spacing: 12px;
 }
 
-header .profile{
+.up_panel .profile{
     display: inline-block;
     float: right;
     color: #ffffff;
@@ -54,13 +54,9 @@ header .profile{
     font-size: 25px;
 }
 
-header .logout{
+.up_panel .logout{
      color: #fff;
      text-decoration: underline;
-}
-
-ul{
-    margin: 0px;
 }
 
 header .insets{
@@ -69,7 +65,7 @@ header .insets{
     margin: 0px;
 }
 
-header .inset_btn{
+.insets .inset_btn{
     padding-left: 25px;
     padding-right: 25px;
     line-height: 50px;
@@ -84,8 +80,11 @@ header .inset_btn{
 
 }
 
-form{
+.main_form{
     margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .alert{
@@ -119,26 +118,22 @@ form{
     height: 17px;
 }
 
-.login_text{
-    font-size: 30px;
+.btn{
+    border-radius: 10px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
     font-weight: bold;
     font-size: 20px;
+    color: #fff;
 }
 
-.topic_btn{
+.btn.topic_btn{
     background-color: #ad0000;
-    border-radius: 10px;
     width: 400px;
     height: 40px;
-    display: inline-block;
     margin-bottom: 30px;
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
     line-height: 40px;
-    font-size: 20px;
-    font-weight: bold;
 }
 
 #add_topic.description{
@@ -146,9 +141,10 @@ form{
     height: 200px;
     align: top;
     font-size: 20px;
+    resize: none;
 }
 
-.topic{
+#topic{
     border: 2px solid #860000;
     display: inline-block;
     font-size: 15px;
@@ -160,7 +156,20 @@ form{
     margin-right: 50px;
 }
 
-.topic .title{
+#main_topic{
+    border: 2px solid #860000;
+    display: inline-block;
+    font-size: 15px;
+    padding: 20px;
+    width: 60%;
+    padding-right: 150px;
+    border-left: 20px solid #9c4646;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+#topic .title{
     font-size: 25px;
     font-weight: bold;
     color: #b50000;
@@ -168,35 +177,203 @@ form{
     text-decoration: none;
 }
 
-.topic .data{
+#topic .data{
     font-size: 17px;
 }
 
-#topic .author{
+#topic .description{
+    width: 80%;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#main_topic .author{
     display: table-cell;
     float: left;
     font-weight: bold;
     font-size: 23px;
     margin-top: 10px;
     color: #8100c3;
-}
-
-#topic .text{
-    display: table-cell;
     margin-right: 50px;
 }
 
+#main_topic .text{
+    display: table-cell;
+    margin-left: 50px;
+}
+
+#main_topic .data{
+    margin-top: 60px;
+    font-size: 18px;
+}
 .text .title{
     color: #6600b3;
-    font-size: 30px;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
 .text .description{
     font-size: 20px;
+    white-space: pre-wrap;
 
 }
 
-.delete{
+#topic .delete{
     color: #8500ff;
     font-size: 15px;
+    background-color: #ffb5b5;
+    border-radius:6px;
+    border: 1px solid #8a5a5a;
+    text-decoration: none;
+    padding: 4px;
+    font-weight: bold;
+    color: #b34040;
+
+}
+
+.write_comment{
+    margin-top: 10px;
+    width: 40%;
+    height: 60px;
+    font-size: 20px;
+    padding: 20px;
+    padding-top: 10px;
+    resize: none;
+    overflow: hidden;
+    outline-color: #6200ff;
+}
+
+.btn.comment_btn{
+    background-color: #af0081;
+    font-size: 15px;
+    margin-left: 60px;
+    margin-top: 10px;
+    margin: 10px 0 20px 30px;
+    width: 200px;
+    height: 30px;
+    border-color: #83289a;
+}
+
+.background{
+    background-color: #ffd3d3;
+    border: 2px solid #d4b3b3;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#comment{
+    width: 60%;
+
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 22px;
+    margin: 10px 0 10px 20px;
+    background-color: #ffe1e1;
+
+}
+
+#comment .author{
+    display: inline-block;
+    color: #b70000;
+    margin-bottom: 13px;
+}
+
+#comment .text{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+#comment .data{
+    display: inline-block;
+    margin-top: 710;
+    font-size: 18px;
+    color: #7300a2;
+}
+
+.self_border{
+    border: 1px solid #380082;
+    border-left: 10px solid #480196;
+}
+
+#comment .btn_comment{
+    color: #8500ff;
+    font-size: 15px;
+    background-color: #bfbbf9;
+    border-radius:6px;
+    border: 1px solid #8a5a5a;
+    text-decoration: none;
+    padding: 4px;
+    font-weight: bold;
+    color: #8140b3;
+    margin-left: 12px;
+}
+
+#comment .self_name{
+    color: #ab00bf;
+}
+
+.another_border{
+    border: 1px solid #c70000;
+    border-left: 10px solid #dc0000;
+
+}
+
+#comment .another_name{
+    color: #960000
+}
+
+.write_comment_padding{
+    padding-left: 20px;
+}
+
+.image{
+    width: 20px;
+    height: 20px;
+}
+
+.display_form{
+    display: block;
+}
+
+.display-inline{
+    display: inline-block;
+}
+
+.btn.like{
+    width: 34px;
+    height: 30px;
+}
+
+.btn.like.color_false{
+    background-color: #ff7b7b;
+}
+
+.btn.like.color_true{
+    background-color: #c778f3;
+}
+
+.btn.like.color_none{
+    background-color: #aaa;
+    disabled: disabled;
+}
+
+#profile {
+    padding: 20px;
+    font-size: 23px;
+    color: #900000;
+}
+
+#profile .nomination{
+    color: #53007d;
+    margin: 3px 0 3px 35px;
+}
+
+.btn.page_btn{
+    background-color: #ad0000;
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+    border-radius: 3px;
 }

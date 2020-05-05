@@ -1,6 +1,11 @@
-{% extends base.html %}
+{% extends "base.html"%}
 
 {% block content %}
-<img src>
+<div id="profile" class="background">
+    Ник: <div class="nomination">{{user.name}}</div>
+    Почта: <div class="nomination">{{user.email}}</div>
+    Дата создания аккаунта: <div class="nomination">{{user.created_date.strftime("%d-%m-%Y")}}</div>
+
+</div>
 
 {% endblock %}
